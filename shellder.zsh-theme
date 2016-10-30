@@ -77,7 +77,7 @@ prompt_git() {
         color='202' # vcs_info will be disabled with MSYS2, warn it with color
       fi
     else
-      color='black'
+      color='white'
     fi
     prompt_segment $color black
 
