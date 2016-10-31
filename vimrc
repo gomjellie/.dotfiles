@@ -30,17 +30,52 @@ filetype plugin indent on    " required
 "
 "##########################################################"
 set nu
-set sw=3
-set ts=3
-set ai
-set ci
-set si
+set sw=4
+set ts=4
+set ai "Auto Indent
+set ci "C style Indent
+set si "Smart Indent
+set wrap "Wrap lines 
 colorscheme elflord
 syntax on
+set ruler
+
+
+" I'm not sure that $LANG='kr' works
+let $LANG='kr' 
+set langmenu=en
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases 
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch 
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw 
+
+" For regular expressions turn magic on
+set magic
+
+" Show matching brackets when text indicator is over them
+set showmatch 
+" How many tenths of a second to blink when matching brackets
+set mat=2
+
+
+
 
 "" NERDTree settings
 "" key mappings 
-let mapleader = '`'
+let mapleader = ','
 "autocmd vimenter * NERDTree
 "nmap <C-e> :NERDTreeToggle<CR>" ctrl+e -> mapped to open tree
 ""new tab : `+t
