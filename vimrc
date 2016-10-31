@@ -70,7 +70,16 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
+" 마지막으로 수정된 곳에 커서를 위치함
+au BufReadPost *
+\ if line("'\"") > 0 && line("'\"") <= line("$") |
+\ exe "norm g`\"" |
+\ endif
 
+" 파일 인코딩을 한국어로
+if $LANG[0]=='k' && $LANG[1]=='o'
+set fileencoding=korea
+endif
 
 
 "" NERDTree settings
