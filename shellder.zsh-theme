@@ -1,14 +1,51 @@
 # vim:ft=zsh ts=2 sw=2 sts=2
 
+# ASCII emoticons HERE
+#
+# ᕕ( ᐛ )ᕗ
+
+# ( ͡° ͜ʖ ͡°)
+
+# ಠ_ಠ
+
+# (╯°□°）╯
+
+# (•̀ᴗ•́)و ̑̑
+
+# ༼ つ ◕_◕ ༽つ
+
+# ԅ(≖‿≖ԅ)
+
+# ʕ•ᴥ•ʔ
+
+# •ᴗ•
+
+# (づ￣ ³￣)づ
+
+# ᕦ(ò_óˇ)ᕤ
+
+# ლ(´ڡ`ლ)
+
+# (ᗒᗣᗕ)՞
+
+# ( ￣▽￣)/
+
+# V● ᴥ●V 
+
+# ლ (=ↀ ω ↀ =)ლ
+#
+#(๑>◡<๑)
+#
+#
 #
 # Segment drawing
 #
-CURRENT_BG='NONE'
+		CURRENT_BG='NONE'
 
 # Special Powerline characters
 () {
   local LC_ALL="" LC_CTYPE="en_US.UTF-8"
-  SEGMENT_SEPARATOR=$'ふ' #\ue0b0
+  SEGMENT_SEPARATOR=$'(づ￣ ³￣)づ' #\ue0b0  ふ your own char here >_<
 }
 
 # Begin a segment
@@ -66,7 +103,7 @@ prompt_git() {
 
     () {
       local LC_ALL="" LC_CTYPE="en_US.UTF-8"
-      PL_BRANCH_CHAR=$'ん' #   \ue0a0
+      PL_BRANCH_CHAR=$'ᕕ( ᐛ )ᕗ' #   \ue0a0 ん your own char here '\\(\' \') \/'
     }
 
     dirty=$(command git status --porcelain --ignore-submodules=dirty 2> /dev/null)
@@ -166,7 +203,7 @@ prompt_status() {
   [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
 
-  [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
+  [[ -n "$symbols" ]] && prompt_segment blue default "$symbols"
 }
 
 
