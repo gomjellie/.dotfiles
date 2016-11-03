@@ -1,0 +1,32 @@
+"cp from ~/.config/xfce4/terminal/terminalrc
+
+[Configuration]
+ColorForeground=#6caaffff6666
+ColorBackground=#131926
+ColorCursor=#ffff66666a05
+ColorSelection=#ffff7070cfcf
+ColorSelectionUseDefault=FALSE
+ColorBoldUseDefault=FALSE
+ColorPalette=#000000000000;#ffff00007f7f;#141498980101;#ffff6666835a;#00003939aaaa;#ffff07077f7f;#ccccffff6666;#cdcdcdcdcdcd;#666666666666;#dcdc00000505;#0d0dffff0101;#ccccffff6666;#29295f5fcccc;#ffff00007f7f;#0000fefeffff;#fcfcfdfdfdfd
+FontName=DejaVu Sans Mono 9
+MiscAlwaysShowTabs=FALSE
+MiscBell=FALSE
+MiscBordersDefault=TRUE
+MiscCursorBlinks=FALSE
+MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
+MiscDefaultGeometry=80x24
+MiscInheritGeometry=FALSE
+MiscMenubarDefault=TRUE
+MiscMouseAutohide=FALSE
+MiscToolbarDefault=FALSE
+MiscConfirmClose=TRUE
+MiscCycleTabs=TRUE
+MiscTabCloseButtons=TRUE
+MiscTabCloseMiddleClick=TRUE
+MiscTabPosition=GTK_POS_TOP
+MiscHighlightUrls=TRUE
+MiscScrollAlternateScreen=TRUE
+TabActivityColor=#ffff7070cfcf
+BackgroundDarkness=0.510000
+ColorBold=#6666ffffcccc
+
