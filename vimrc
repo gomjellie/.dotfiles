@@ -1,3 +1,6 @@
+"mkdir -p ~/.vim/autoload ~/.vim/bundle && \ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+
 set shell=/bin/bash
 set nocompatible 
 filetype off
