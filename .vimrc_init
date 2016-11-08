@@ -1,4 +1,6 @@
-" you should set this code as ~/.vimrc and do :PluginInstall
+" 1. git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+" 2. you should set this code as ~/.vimrc and do :PluginInstall
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
