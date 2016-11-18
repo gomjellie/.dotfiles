@@ -71,7 +71,9 @@ programming tools setting files
 
 > but it's not necessary if you don't want that just hit enter twice
 
->:wq to exit vim
+>:q to quit install window
+
+>:wq to quit vim
 
 ###6. install pathogen
 
@@ -94,6 +96,8 @@ programming tools setting files
 > :PluginInstall
 
 > in vim just type :PluginInstall as you did at 5th step then enter
+
+>:q to quit install window
 
 >:wq to quit vim
 
