@@ -1,37 +1,37 @@
 # settings-etc
 programming tools setting files
 
--1. clone my files
+###1. clone my files
 
 >$ git clone https://github.com/gomjellie/settings-etc
 
--0.9 change directory to settings-etc
+###0.9 change directory to settings-etc
 
 >cd ./settings-etc
 
-0. install zsh
+###0. install zsh
 
-on mac
+>on mac
 
 >$ brew install zsh 
 
-on debian
+>on debian
 
 >$ sudo apt-get install zsh
 
-0.5 set zsh as default shell
+###0.5 set zsh as default shell
 
 >$ chsh -s $(which zsh)
 
-1. install oh-my-zsh
+###1. install oh-my-zsh
 
 >$ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
-2. copy shellder.zsh-theme & set as zsh_theme
+###2. copy shellder.zsh-theme & set as zsh_theme
 
 >cp ./shellder.zsh-theme ~/.oh-my-zsh/themes/
 
-2.1 open ~/.zshrc in vim
+###2.1 open ~/.zshrc in vim
 
 >vim ~/.zshrc
 
@@ -39,23 +39,23 @@ on debian
 
 >:wq  
 
-2.2 run zsh to show changes
+###2.2 run zsh to show changes
 
 >$ zsh
 
-2. install vundle
+###2. install vundle
 
 >$ git clone  https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-3. copy .vimrc_init to ~/.vimrc
+###3. copy .vimrc_init to ~/.vimrc
 
 >$ cp ./.vimrc_init ~/.vimrc
 
-4. open ~/.vimrc in vim
+###4. open ~/.vimrc in vim
 
 >$ vim ~/.vimrc
 
-5. type :PluginInstall
+###5. type :PluginInstall
 
 > :PluginInstall
 
@@ -73,23 +73,23 @@ on debian
 
 >:wq to exit vim
 
-6. install pathogen
+###6. install pathogen
 
 >$ mkdir -p ~/.vim/autoload ~/.vim/bundle
 
 >$ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-5. copy vimrc to ~/.vimrc
+###5. copy vimrc to ~/.vimrc
 
 >$ cp vimrc ~/.vimrc
 
-6. open ~/.vimrc in vim
+###6. open ~/.vimrc in vim
 
 >$ vim ~/.vimrc
 
 > don't close vim and keep go
 
-7. install plugins
+###7. install plugins
 
 > :PluginInstall
 
