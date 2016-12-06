@@ -1,6 +1,3 @@
-"mkdir -p ~/.vim/autoload ~/.vim/bundle && \ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
-
 set shell=/bin/bash
 set nocompatible 
 filetype off
@@ -23,7 +20,7 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'altercation/vim-colors-solarized'
 "Plugin 'edkolev/tmuxline.vim'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'OmniCppComplete'
+Plugin 'valloric/youcompleteme'
 "
 " YouCompleteMe added
 " Bundle 'Valloric/YouCompleteMe'
@@ -73,7 +70,10 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
+set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
+
 " 마지막으로 수정된 곳에 커서를 위치함
+
 au BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line("$") |
 \ exe "norm g`\"" |
@@ -115,25 +115,45 @@ let g:airline#extensions#tabline#enabled = 1
 "let g:solarized_bold = 1
 "let g:solarized_visibility = "high"
 "colorscheme solarized
-execute pathogen#infect()
+
+"execute pathogen#infect()
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 
 
 "for python JEDI
+let g:jedi#completions_enabled = 0
 let g:jedi#auto_initialization=1
 let g:jedi#auto_vim_configuration=0
 let g:jedi#use_tabs_not_buffers=1
 let g:jedi#use_splits_not_buffers = "left"
 let g:jedi#popup_on_dot = 1
 let g:jedi#popup_select_first=0
-let g:jedi#show_call_signatures="1"
+let g:jedi#show_call_signatures="2"
 
 "subjects to change
 let g:jedi#goto_command = "<leader>d"
 let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#goto_definitions_command = ""
+let g:jedi#goto_definitions_command = "<leader>f"
 let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>n"
-let g:jedi#completions_command = "<C-Space>"
+let g:jedi#comkletions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>r"
+
+" Add the virtualenv's site-packages to vim path
+if has('python')
+py << EOF
+import os.path
+import sys
+import vim
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    sys.path.insert(0, project_base_dir)
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
+endif
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_autoclose_preview_window_after_completion = 1
+"let g:ycm_confirm_extra_conf = 0
