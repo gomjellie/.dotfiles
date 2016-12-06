@@ -23,7 +23,6 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'valloric/youcompleteme'
 "
 " YouCompleteMe added
-" Bundle 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -42,7 +41,7 @@ set ruler
 
 
 " I'm not sure that $LANG='kr' works
-let $LANG='kr' 
+let $LANG='ko' 
 set langmenu=en
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
@@ -154,6 +153,10 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 endif
 
+" You Complete Me
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
-"let g:ycm_confirm_extra_conf = 0
+let g:ycm_auto_trigger = 1
+let g:ycm_filetype_whitelist = { '*': 1}
+let g:ycm_filetype_blacklist = { 'c': 1}
+let g:ycm_show_diagnostics_ui = 0
