@@ -20,9 +20,10 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'altercation/vim-colors-solarized'
 "Plugin 'edkolev/tmuxline.vim'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'valloric/youcompleteme'
 "
 " YouCompleteMe added
+Plugin 'valloric/youcompleteme'
+Plugin 'ternjs/tern_for_vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -71,14 +72,14 @@ set mat=2
 
 set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
 
-" ë§ˆì§€ë§‰ìœ¼ë¡œ ìˆ˜ì •ëœ ê³³ì— ì»¤ì„œë¥¼ ìœ„ì¹˜í•¨
+" ¸¶Áö¸·À¸·Î ¼öÁ¤µÈ °÷¿¡ Ä¿¼­¸¦ À§Ä¡ÇÔ
 
 au BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line("$") |
 \ exe "norm g`\"" |
 \ endif
 
-" íŒŒì¼ ì¸ì½”ë”©ì„ í•œêµ­ì–´ë¡œ
+" ÆÄÀÏ ÀÎÄÚµùÀ» ÇÑ±¹¾î·Î
 if $LANG[0]=='k' && $LANG[1]=='o'
 set fileencoding=korea
 endif
@@ -121,9 +122,9 @@ let g:syntastic_enable_signs=1
 
 
 "for python JEDI
-let g:jedi#completions_enabled = 0
+let g:jedi#completions_enabled = 1
 let g:jedi#auto_initialization=1
-let g:jedi#auto_vim_configuration=0
+"let g:jedi#auto_vim_configuration=0
 let g:jedi#use_tabs_not_buffers=1
 let g:jedi#use_splits_not_buffers = "left"
 let g:jedi#popup_on_dot = 1
@@ -159,4 +160,18 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_auto_trigger = 1
 let g:ycm_filetype_whitelist = { '*': 1}
 let g:ycm_filetype_blacklist = { 'c': 1}
-let g:ycm_show_diagnostics_ui = 0
+let g:ycm_show_diagnostics_ui = 1
+let g:ycm_semantic_triggers =  {
+  \   'c' : ['->', '.','re![_a-zA-z0-9]'],
+  \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+  \             're!\[.*\]\s'],
+  \   'ocaml' : ['.', '#'],
+  \   'cpp,objcpp' : ['->', '.', '::','re![_a-zA-Z0-9]'],
+  \   'perl' : ['->'],
+  \   'php' : ['->', '::'],
+  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+  \   'ruby' : ['.', '::'],
+  \   'lua' : ['.', ':'],
+  \   'erlang' : [':'],
+  \ }
+
