@@ -61,6 +61,16 @@ flags = [
 # For a C project, you would set this to 'c' instead of 'c++'.
 '-x',
 'c++',
+
+# 자세한 설명 여기 http://neverapple88.tistory.com/26
+#표준 라이브러리 추가하기
+#이 상태에서 사용을 해보시면 현재 디렉토리에 있는 소스파일속 함수들만 나올껍니다. YCM를 설치한 이유는 수 많은 함수들의 이름을 자동완성 시켜주며 함수의 인자를 팝업창으로 가볍게 보기 위한건데 이거만 덜렁 있으면 의미가 없어질껍니다. 기본 헤더파일하고 STL 헤더파일을 추가해줍시다.
+#
+#echo | gcc -std=c++11 -v -E -x c++ -      " gcc를 사용할 경우
+#echo | clang -std=c++11 -stdlib=libc++ -v -E -x c++ -      "clang을 사용할 경우
+#그러면 여러 정보가 뜰껍니다. 그 중 #include "..." search starts here: 와 #include <...> search starts here: 을 찾으시고 거기 나온 헤더파일 경로들을 ycm_extra_conf.py 설정 파일에 적어주시면 됩니다. 리눅스 배포판마다 경로가 다를껍니다. 다음은 예시입니다.
+#'-isystem',
+#'/usr/~~~~ 경로 여기에',
 '-isystem',
 '../BoostParts',
 '-isystem',
