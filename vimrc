@@ -4,6 +4,7 @@ filetype off
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set encoding=utf-8
 call vundle#begin()
 
 "" All of your Plugins must be added before the following line
@@ -72,14 +73,14 @@ set mat=2
 
 set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
 
-" ¸¶Áö¸·À¸·Î ¼öÁ¤µÈ °÷¿¡ Ä¿¼­¸¦ À§Ä¡ÇÔ
+" ë§ˆì§€ë§‰ìœ¼ë¡œ ìˆ˜ì •ëœ ê³³ì— ì»¤ì„œë¥¼ ìœ„ì¹˜í•¨
 
 au BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line("$") |
 \ exe "norm g`\"" |
 \ endif
 
-" ÆÄÀÏ ÀÎÄÚµùÀ» ÇÑ±¹¾î·Î
+" íŒŒì¼ ì¸ì½”ë”©ì„ í•œêµ­ì–´ë¡œ
 if $LANG[0]=='k' && $LANG[1]=='o'
 set fileencoding=korea
 endif
