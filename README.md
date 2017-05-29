@@ -21,7 +21,7 @@ programming tools setting files
 
 ###0.5 set zsh as default shell
 
->$ chsh -s $(which zsh)
+>$ sudo chsh -s $(which zsh)
 
 ###1. install oh-my-zsh
 
