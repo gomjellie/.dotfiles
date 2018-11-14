@@ -80,7 +80,7 @@ brew install autoenv
 
 
 
-## Go2Shell 설치하기
+### Go2Shell 설치하기
 
 Finder 에서 탐색하던 디렉토리에서 바로 터미널을 시작시켜주는 어플이다.
 
