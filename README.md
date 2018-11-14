@@ -1,91 +1,12 @@
-# 본격 macOS에 개발 환경 구축하기
 
-https://subicura.com/2017/11/22/mac-os-development-environment-setup.html
 
-# settings-etc
-programming tools setting files
 
-# clone my files
-```
-$ git clone https://github.com/gomjellie/settings-etc
-```
-# change directory to settings-etc
-```
-$ cd ./settings-etc
-```
-# install zsh
 
-mac:
-```
-$ brew install zsh 
-```
-debian:
-```
-$ sudo apt-get install zsh
-```
+# .dotfiles
 
-# set zsh as default shell
-```
-$ sudo chsh -s $(which zsh)
-```
-# install oh-my-zsh
-```
-$ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-```
-# set zsh-theme
+[맥 설정](mac/readme.md)
 
-copy theme
-```
-$ cp ./shellder.zsh-theme ~/.oh-my-zsh/themes/
-```
+[윈도우즈 설정](windows/readme.md)
 
-open ~/.zshrc in vim
-```
-$ vim ~/.zshrc
+[리눅스 설정](linux/readme.md) 은 아직 없음.
 
-change 10th line to ZSH_THEME="shellder"
-:wq  
-```
-# run zsh to show changes
-```
-$ zsh
-```
-# install vundle
-```
-$ git clone  https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-```
-copy .vimrc_init to ~/.vimrc
-```
-$ cp ./.vimrc_init ~/.vimrc
-```
-open ~/.vimrc in vim
-```
-$ vim ~/.vimrc
-```
-type :PluginInstall
-```
-:PluginInstall
-```
-
-# install pathogen
-```
-$ mkdir -p ~/.vim/autoload ~/.vim/bundle
-
-$ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-```
-
-# get final vimrc
-
-copy vimrc to ~/.vimrc
-```
-$ cp vimrc ~/.vimrc
-```
-open ~/.vimrc in vim
-```
-$ vim ~/.vimrc
-```
-
-install plugins
-```
-:PluginInstall
-```
