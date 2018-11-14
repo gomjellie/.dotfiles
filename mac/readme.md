@@ -4,7 +4,7 @@
 
 ## 아래 블로그에서 기본 설정들, 프로그램들 깔기
 
-https://subicura.com/2017/11/22/mac-os-development-environment-setup.html
+[subicura 블로그](https://subicura.com/2017/11/22/mac-os-development-environment-setup.html) 참조해서 설치
 
 이것만 해도 엄청 쓸만해진다.! (감사합니다..... subicura HEROES.....)
 
@@ -34,7 +34,7 @@ cherryMelon.terminal 파일을 terminal profile 에 추가한다.
 brew install macvim --override-system-vim
 ```
 
-https://github.com/amix/vimrc 깔면 대부분의 vim 설정이 끝난다.
+[amix의 vimrc](https://github.com/amix/vimrc) 깔면 대부분의 vim 설정이 끝난다.
 
 ~/.vim_runtime/vimrcs/basic.vim 에 따로 추가하고 싶은 옵션을 추가한다.
 
