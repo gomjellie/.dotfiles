@@ -45,6 +45,13 @@ set nu 를 추가하면 line number 가 왼쪽에 표기된다.
 
 ## Applications
 
+### Screen Capture
+
+스크린샷 저장위치 지정
+
+```sh
+defaults write com.apple.screencapture location YOUR_LOCATION_HERE
+```
 
 ### Xcode
 
