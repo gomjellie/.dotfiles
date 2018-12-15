@@ -25,6 +25,18 @@ ZSH_THEME="agnoster" 로 테마 변경한다. (폰트가 안깔려 있으면 따
 
 cherryMelon.terminal 파일을 terminal profile 에 추가한다.
 
+## Finder
+
+Quick Look 기능을 더 많은 파일에서 쓸수있거나, 기존보다 더 좋게 훑어볼 수 있다.
+
+[quick-look-plugins](https://github.com/sindresorhus/quick-look-plugins)에서 플러그인들을 찾아서 설치하면 된다.
+
+설치 완료후 터미널에 다음 스크립트를 입력하면 재부팅하지 않고 바로 사용할 수 있다.
+
+```sh
+qlmanage -r
+```
+
 ## vim
 
 기본 vim 버리고 neovim 으로 덮어쓰기
