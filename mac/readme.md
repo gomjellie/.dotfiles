@@ -18,20 +18,19 @@
 
 ZSH_THEME="agnoster" 로 테마 변경한다. (폰트가 안깔려 있으면 따로 설치해서 터미널 폰트 변경 해줘야함)
 
+[powerline font](https://github.com/powerline/fonts)에서 설치할 수 있다.
 
 
 ### terminal profile
 
 cherryMelon.terminal 파일을 terminal profile 에 추가한다.
 
-
-
 ## vim
 
-기본 vim 버리고 macvim 으로 덮어쓰기
+기본 vim 버리고 neovim 으로 덮어쓰기
 
 ```sh
-brew install macvim --override-system-vim
+brew install neovim --override-system-vim
 ```
 
 [amix의 vimrc](https://github.com/amix/vimrc) 깔면 대부분의 vim 설정이 끝난다.
@@ -47,6 +46,21 @@ set nu 를 추가하면 line number 가 왼쪽에 표기된다.
 ## Applications
 
 
+### Xcode
+
+if your os version is too lower to get download xcode on app store
+
+go https://developer.apple.com/download/more and
+ 
+download 8.2.1 for OS X 10.11.6(el capitan).
+
+### Kakao Talk
+
+```sh
+defaults write com.kakao.KakaoTalkMac HideMenuBarIconMenu YES
+```
+
+터미널에 위의 내용을 넣으면 상단바의 아이콘을 클릭했을때 바로 카톡이 뜨게 바꿀 수 있다!
 
 ### iina
 
