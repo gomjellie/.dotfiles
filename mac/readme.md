@@ -42,7 +42,18 @@ qlmanage -r
 기본 vim 버리고 neovim 으로 덮어쓰기
 
 ```sh
-brew install neovim --override-system-vim
+brew install neovim 
+
+```
+
+설치 완료후 ~/.zshrc 에 다음 항목들을 추가한다.
+
+```sh
+alias vim="nvim"
+alias vi="nvim"
+alias vimdiff="nvim -d"
+export EDITOR=/usr/local/bin/nvim
+
 ```
 
 [amix의 vimrc](https://github.com/amix/vimrc) 깔면 대부분의 vim 설정이 끝난다.
@@ -51,7 +62,14 @@ brew install neovim --override-system-vim
 
 set nu 를 추가하면 line number 가 왼쪽에 표기된다.
 
+###.nvimrc 설정
 
+```sh
+mkdir -p ~/.config/nvim
+echo 'source ~/.nvimrc' > ~/.config/nvim/init.vim
+
+ln -s ~/.vimrc ~/.nvimrc # make link file ~/.nvimrc -> ~/.vimrc
+```
 
 
 
