@@ -45,7 +45,7 @@
 # Special Powerline characters
 () {
   local LC_ALL="" LC_CTYPE="en_US.UTF-8"
-  SEGMENT_SEPARATOR=$'(づ￣ ³￣)づ' #\ue0b0  ふ your own char here >_<
+  SEGMENT_SEPARATOR=$'•ᴗ•' #\ue0b0  ふ your own char here >_<
 }
 
 # Begin a segment
@@ -103,7 +103,7 @@ prompt_git() {
 
     () {
       local LC_ALL="" LC_CTYPE="en_US.UTF-8"
-      PL_BRANCH_CHAR=$'ᕕ( ᐛ )ᕗ' #   \ue0a0 ん your own char here '\\(\' \') \/'
+      PL_BRANCH_CHAR=$'ʕ•ᴥ•ʔ' #   \ue0a0 ん your own char here '\\(\' \') \/'
     }
 
     dirty=$(command git status --porcelain --ignore-submodules=dirty 2> /dev/null)
