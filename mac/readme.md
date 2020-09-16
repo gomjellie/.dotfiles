@@ -141,6 +141,10 @@ Finder 에서 탐색하던 디렉토리에서 바로 터미널을 시작시켜�
 
 terminal 에서 git sign in 을 mac keychain 으로 관리하게 해줌
 
+```sh
+git config --global credential.helper osxkeychain
+```
+
 [help.github.com](https://help.github.com/en/articles/caching-your-github-password-in-git)를 참고
 
 
