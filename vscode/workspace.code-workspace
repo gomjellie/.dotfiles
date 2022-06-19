@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "name": "space-name",
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+      // "source.organizeImports": true
+    },
+    "eslint.validate": ["typescript"],
+    "editor.formatOnSave": true,
+    "typescript.suggest.autoImports": true,
+    "typescript.suggest.paths": true,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "node_modules": true
+    }
+  }
+}
