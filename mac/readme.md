@@ -162,4 +162,18 @@ Settings -> Keyboard -> Modifier Keys : Caps Lock 을 ^ Control 로 지정해 �
 
 Settings -> Keyboard -> Keyboard 탭에 Use F1, F2, etc. keys as standard function keys 체크.
 
+### ₩표시 \`로 변경
+
+```sh
+cd ~/Library
+mkdir KeyBindings
+touch DefaultkeyBinding.dict
+```
+
+```
+{
+    "₩" = ("insertText:", "`");
+}
+```
+
 
