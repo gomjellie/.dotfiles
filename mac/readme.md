@@ -179,3 +179,25 @@ touch DefaultkeyBinding.dict
 ## [MacGesture](https://github.com/MacGesture/MacGesture)
 
 <img width="500" alt="d135c549-92df-488b-af10-24dff21c9d3e" src="https://user-images.githubusercontent.com/13645032/218003769-7e384920-4153-41a3-beaf-42da5dab9615.png">
+
+## node 설치 (nvm 사용)
+
+```sh
+brew install nvm
+```
+
+.zshrc에 아래 내용 추가 (brew install nvm 했을때 안내 뜸)
+
+```sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+```
+
+```sh
+
+  - `nvm ls-remote` 명령으로 설치 가능한 버전 볼 수 있음 
+  - `nvm install 18.14.0` 명령으로 버전 설치 가능
+  - `nvm use 18.14.0` 명령으로 사용하 노드 버전 설정
+
+
