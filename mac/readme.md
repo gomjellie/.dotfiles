@@ -8,7 +8,11 @@
 
 이것만 해도 엄청 쓸만해진다.! (감사합니다..... subicura HEROES.....)
 
+## git
 
+```sh
+git config --global alias.gone "! git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '\$2 == \"[gone]\" {print \$1}' | xargs -r git branch -D"
+```
 
 ## Terminal
 
