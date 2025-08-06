@@ -24,10 +24,13 @@ ZSH_THEME="agnoster" 로 테마 변경한다. (폰트가 안깔려 있으면 따
 
 [powerline font](https://github.com/powerline/fonts)에서 설치할 수 있다.
 
-
 ### terminal profile
 
 cherryMelon.terminal 파일을 terminal profile 에 추가한다.
+
+### Amazon Q
+
+https://docs.aws.amazon.com/ko_kr/amazonq/latest/qdeveloper-ug/command-line-installing.html
 
 ## Finder
 
